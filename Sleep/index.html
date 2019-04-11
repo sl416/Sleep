@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<!-- Sabrina Li -->
+<html>
+	<head>
+		<title>Sleep</title>
+		<link rel = "stylesheet" href = "index.css"></style>
+		<style></style>
+		<script>
+			function initialize()
+			{
+				optionRequest = new XMLHttpRequest();
+				optionRequest.open("GET", "http://localhost:8081/account", true);
+				optionRequest.onreadystatechange = function()
+				{
+					if (optionRequest.readyState == 4)
+					{
+						var response = optionRequest.responseText;
+						response = response.split(";");
+						current = JSON.parse(response[0]);
+						
+						if (current.firstname != "default")
+						{
+							document.getElementById("acc").text = "Welcome, " + current.firstname + " " + current.lastname;
+							document.getElementById("acc").href = "account.html";
+							document.getElementById("icon").src = current.icon;
+						}
+						else
+						{
+							document.getElementById("acc").text = "Account";
+							document.getElementById("acc").href = "login.html";
+							document.getElementById("icon").src = "images/default.png";
+						}
+					}
+				}
+				
+				optionRequest.send(null);
+			}
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<img class = "bgnd" src = "images/bgnd.jpg"/>
+		<div class = "acc">
+			<img id = "icon" src = "images/camera.png"/>
+			<a id = "acc"></a>
+		</div>
+		<br />
+		<div class = "container">
+			<img src = "images/learn.png"/>
+			<a class = "text" href = "info.html">Learn More About Sleep</a>
+		</div>
+		<div class = "container">
+			<img src = "images/sleep.png"/>
+			<a class = "text" href = "music.html">Sleep Music</a>
+		</div>
+		<div class = "container">
+			<img src = "images/record.png"/>
+			<a class = "text" href = "record.html">Record Sleep</a>
+		</div>
+	</body>
+</html>

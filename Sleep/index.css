@@ -1,0 +1,64 @@
+.container
+{
+	position:relative;
+	text-align:center
+}
+
+img
+{
+	width:60%;
+}
+
+a
+{
+	color:black;
+	font:bold 50px comic sans ms, sans-serif;
+}
+
+.text
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+#acc
+{
+	color:white;
+}
+
+.acc
+{
+	width:98vw;
+	height:75px;
+	text-align:center;
+	margin-top:30px;
+}
+
+#icon
+{
+	width:65px;
+}
+
+.bgnd
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:-1;
+	min-height:100%;
+	filter:brightness(80%) blur(5px);
+}
+
+body
+{
+	font:bold 20px comic sans ms, sans-serif;
+}
+
+a
+{
+    padding:10px 50px;
+	text-decoration:none;
+}
