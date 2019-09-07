@@ -1,1 +1,0 @@
-{"uname":"default" ,"pword":"default", "firstname":"default", "lastname":"default" ,"icon":"images/default.png"}

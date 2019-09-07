@@ -1,1 +1,0 @@
-{"uname":"default" ,"pword":"default", "firstname":"default", "lastname":"default" ,"icon":"images/default.png"};{"uname":"sli" ,"pword":"123", "firstname":"Sabrina", "lastname":"Li" ,"icon":"images/flower.png"}
