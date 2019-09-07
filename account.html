@@ -10,7 +10,7 @@
 			function initialize()
 			{
 				optionRequest = new XMLHttpRequest();
-				optionRequest.open("GET", "http://localhost:3000/account", true);
+				optionRequest.open("GET", "https://sleepwebapp.herokuapp.com/account", true);
 				optionRequest.onreadystatechange = function()
 				{
 					if (optionRequest.readyState == 4)
@@ -39,7 +39,7 @@
 			function logout()
 			{
 				optionRequest = new XMLHttpRequest();
-				optionRequest.open("GET", "http://localhost:3000/logout", true);
+				optionRequest.open("GET", "https://sleepwebapp.herokuapp.com/logout", true);
 				optionRequest.onreadystatechange = function()
 				{
 					if (optionRequest.readyState == 4)

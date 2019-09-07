@@ -10,7 +10,7 @@
 			function initialize()
 			{
 				optionRequest = new XMLHttpRequest();
-				optionRequest.open("GET", "http://localhost:3000/account", true);
+				optionRequest.open("GET", "https://sleepwebapp.herokuapp.com/account", true);
 				optionRequest.onreadystatechange = function()
 				{
 					if (optionRequest.readyState == 4)
@@ -49,13 +49,13 @@
 				
 				if (option == "music")
 				{
-					optionRequest.open("GET", "http://localhost:3000/music", true);
+					optionRequest.open("GET", "https://sleepwebapp.herokuapp.com/music", true);
 					ajax('music');
 				}
 				
 				if (option == "sounds")
 				{
-					optionRequest.open("GET", "http://localhost:3000/sounds", true);
+					optionRequest.open("GET", "https://sleepwebapp.herokuapp.com/sounds", true);
 					ajax('sounds');
 				}
 				
