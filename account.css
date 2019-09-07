@@ -1,0 +1,43 @@
+div
+{
+	font-size:40px;
+}
+
+img
+{
+	width:150px;
+}
+
+#icon
+{
+	width:300px;
+}
+
+#logOut
+{
+	background-color:red;
+}
+
+#submit
+{
+	display:inline-block;
+	color:white;
+	background-color:#0099ff;
+	font-size:40px;
+	width:200px;
+	height:70px;
+	border:none;
+	text-align:center;
+    text-decoration:none;
+}
+
+#submit:hover, #submit:active
+{
+	background-color:#008ae6
+}
+
+#submit:active
+{
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!-- Sabrina Li -->
+<html>
+	<head>
+		<title>Sleep</title>
+		<link rel = "stylesheet" href = "pages.css"/>
+		<link rel = "stylesheet" href = "account.css"/>
+		<style></style>
+		<script>
+			function initialize()
+			{
+				optionRequest = new XMLHttpRequest();
+				optionRequest.open("GET", "http://localhost:3000/account", true);
+				optionRequest.onreadystatechange = function()
+				{
+					if (optionRequest.readyState == 4)
+					{
+						var response = optionRequest.responseText;
+						response = response.split(";");
+						current = JSON.parse(response[0]);
+						document.getElementById("divy").innerHTML = current.firstname + " " + current.lastname;
+						document.getElementById("un").value = current.uname;
+						document.getElementById("pw").value = current.pword;
+						document.getElementById("fi").value = current.firstname;
+						document.getElementById("la").value = current.lastname;
+						document.getElementById("icon").src = current.icon;
+					}
+				}
+				
+				optionRequest.send(null);
+			}
+			
+			function changePic(img)
+			{
+				document.getElementById("icon").src = img;
+				document.getElementById("ic").value = img;
+			}
+			
+			function logout()
+			{
+				optionRequest = new XMLHttpRequest();
+				optionRequest.open("GET", "http://localhost:3000/logout", true);
+				optionRequest.onreadystatechange = function()
+				{
+					if (optionRequest.readyState == 4)
+					{
+						
+					}
+				}
+				
+				optionRequest.send(null);
+
+				window.location.replace("index.html");
+			}
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<img class = "bgnd" src = "images/bgnd2.jpg"/>
+		<a href = "index.html">Home</a>
+		<a href = "info.html">Learn More About Sleep</a>
+		<a href = "music.html">Sleep Music</a>
+		<a href = "record.html">Record Sleep</a>
+		<a href = "account.html">Account</a>
+		<br />
+		<br />
+		<div id = "divy"></div>
+		<br />
+		<img id = "icon" src = ""/>
+		<br />
+		<h2>Change Profile Picture</h2>
+		<br />
+		<img src = "images/default.png" onclick = "changePic('images/default.png');"/>
+		<img src = "images/bear.png" onclick = "changePic('images/bear.png');"/>
+		<img src = "images/flower.png" onclick = "changePic('images/flower.png');"/>
+		<img src = "images/flower2.png" onclick = "changePic('images/flower2.png');"/>
+		<img src = "images/butterfly.png" onclick = "changePic('images/butterfly.png');"/>
+		<img src = "images/star.png" onclick = "changePic('images/star.png');"/>
+		<br />
+		<br />
+		<form method = "post" action = "index.html">
+			<input id = "un" type = "hidden" name = "uname" value = ""/>
+			<input id = "pw" type = "hidden" name = "pword" value = ""/>
+			<input id = "fi" type = "hidden" name = "first" value = ""/>
+			<input id = "la" type = "hidden" name = "last" value = ""/>
+			<input id = "ic" type = "hidden" name = "icon" value = "" />
+			<input type = "hidden" name = "account" value = "true" />
+			<input id = "submit" type = "submit" />
+		</form>
+		<br />
+		<button id = "logOut" onclick = "logout();">Log Out</button>
+	</body>
+</html>

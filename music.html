@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!-- Sabrina Li -->
+<html>
+	<head>
+		<title>Sleep</title>
+		<link rel = "stylesheet" href = "pages.css"></style>
+		<link rel = "stylesheet" href = "music.css"></style>
+		<style></style>
+		<script>
+			function initialize()
+			{
+				optionRequest = new XMLHttpRequest();
+				optionRequest.open("GET", "http://localhost:3000/account", true);
+				optionRequest.onreadystatechange = function()
+				{
+					if (optionRequest.readyState == 4)
+					{
+						var response = optionRequest.responseText;
+						response = response.split(";");
+						current = JSON.parse(response[0]);
+						
+						if (current.firstname != "default")
+						{
+							document.getElementById("acc").href = "account.html";
+						}
+						else
+						{
+							document.getElementById("acc").text = "Account";
+							document.getElementById("acc").href = "login.html";
+						}
+				
+					}
+				}
+				
+				optionRequest.send(null);
+				
+				theFavs = [];
+				theDiv = document.getElementById("divy");
+			}
+			
+			function select(option)
+			{
+				while (theDiv.hasChildNodes())
+				{
+					theDiv.removeChild(theDiv.childNodes[0]);
+				}
+				
+				optionRequest = new XMLHttpRequest();
+				
+				if (option == "music")
+				{
+					optionRequest.open("GET", "http://localhost:3000/music", true);
+					ajax('music');
+				}
+				
+				if (option == "sounds")
+				{
+					optionRequest.open("GET", "http://localhost:3000/sounds", true);
+					ajax('sounds');
+				}
+				
+				if (option == "fav")
+				{
+					for (var i = 0; i < theFavs.length; i++)
+					{
+						(function ()
+						{
+							var divThing = document.createElement("div");
+							var title = document.createElement("span");
+							title.innerHTML = theFavs[i][0];
+							var imgSrc = document.createElement("img");
+							imgSrc.src = theFavs[i][1];
+							var audioSrc = document.createElement("audio");
+							audioSrc.controls = "controls";
+							audioSrc.src = theFavs[i][2];
+							audioSrc.type = "audio/mpeg";
+							
+							divThing.appendChild(imgSrc);
+							divThing.appendChild(document.createElement("br"));
+							divThing.appendChild(title);
+							divThing.appendChild(document.createElement("br"));
+							divThing.appendChild(audioSrc);
+							
+							if (theFavs[i][3] == "music")
+							{
+								divThing.addEventListener("click", function()
+								{
+									document.getElementsByClassName("bgnd")[0].src = imgSrc.src;
+								});
+							}
+							else
+							{
+								divThing.addEventListener("click", function()
+								{
+									document.getElementsByClassName("bgnd")[0].src = "images/bgnd.jpg";
+								});
+							}
+							
+							theDiv.appendChild(divThing);
+							theDiv.appendChild(document.createElement("br"));
+						})();
+					}
+				}
+			}
+			
+			function ajax(option)
+			{
+				optionRequest.onreadystatechange = function()
+				{
+					if (optionRequest.readyState == 4)
+					{
+						var response = optionRequest.responseText;
+						response = response.split(";");
+						for (var i = 0; i < response.length; i++)
+						{
+							(function() 
+							{
+								var obj = JSON.parse(response[i]);
+								var divThing = document.createElement("div");
+								var title = document.createElement("span");
+								title.innerHTML = obj.name;
+								title.className = "title";
+								var imgSrc = document.createElement("img");
+								imgSrc.src = obj.img;
+								var audioSrc = document.createElement("audio");
+								audioSrc.controls = "controls";
+								audioSrc.src = obj.audio;
+								audioSrc.type = "audio/mpeg";
+								var favButton = document.createElement("button");
+								favButton.innerHTML = "Add to Favorites";
+								favButton.className = "play";
+								if (option == "music")
+								{
+									obj.type = "music";
+								}
+								else
+								{
+									obj.type = "sounds";
+								}
+
+								favButton.addEventListener("click", function()
+								{
+									var add = [obj.name, obj.img, obj.audio, obj.type]
+									theFavs.push(add);
+								});
+								
+								divThing.appendChild(imgSrc);
+								divThing.appendChild(document.createElement("br"));
+								divThing.appendChild(title);
+								divThing.appendChild(document.createElement("br"));
+								divThing.appendChild(audioSrc);
+								divThing.appendChild(document.createElement("br"));
+								divThing.appendChild(favButton);
+								
+								if (option == "music")
+								{
+									divThing.addEventListener("click", function()
+									{
+										document.getElementsByClassName("bgnd")[0].src = obj.img;
+									});
+								}
+								else
+								{
+									divThing.addEventListener("click", function()
+									{
+										document.getElementsByClassName("bgnd")[0].src = "images/bgnd.jpg";
+									});
+								}
+								theDiv.appendChild(divThing);
+								theDiv.appendChild(document.createElement("br"));
+							})();
+							
+						}
+					}
+				}
+				optionRequest.send(null);
+			}
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<img class = "bgnd" src = "images/bgnd.jpg"/>
+		<a href = "index.html">Home</a>
+		<a href = "info.html">Learn More About Sleep</a>
+		<a href = "music.html">Sleep Music</a>
+		<a href = "record.html">Record Sleep</a>
+		<a id = "acc">Account</a>
+		<br />
+		<br />
+		<br />
+		<button onclick = "select('music');">Music</button>
+		<button onclick = "select('sounds');">Sounds</button>
+		<button onclick = "select('fav');">Favorites</button>
+		<br />
+		<div id = "divy">
+	</body>
+</html>
