@@ -47,7 +47,7 @@
 						response = response.split(";");
 						current = JSON.parse(response[0]);
 
-						if (current.firstname)
+						if (current.firstname != "default")
 						{
 							document.getElementById("acc").href = "account.html";
 						}
