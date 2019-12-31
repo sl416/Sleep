@@ -3,37 +3,8 @@
 <html>
 	<head>
 		<title>Sleep</title>
-		<link rel = "stylesheet" href = "pages.css"/>
-		<style>
-			button
-			{
-				width:80vw;
-				height:50px;
-				margin:5px;
-			}
-			
-			#container
-			{
-				margin: 0 auto;
-				width:80vw;
-			}
-			
-			h2, h4
-			{
-				text-align:left;
-			}
-			
-			.info
-			{
-				width:500px;
-				text-align:center;
-			}
-			
-			h4 
-			{
-				font-size:9px;
-			}
-		</style>
+		<link rel = "stylesheet" href = "style.css"/>
+		<style></style>
 		<script>
 			function initialize()
 			{
@@ -84,64 +55,64 @@
 	</head>
 	<body onload = "initialize();">
 		<img class = "bgnd" src = "images/bgnd.jpg"/>
-		<a href = "index.html">Home</a>
-		<a href = "info.html">Learn More About Sleep</a>
-		<a href = "music.html">Sleep Music</a>
-		<a href = "record.html">Record Sleep</a>
-		<a id = "acc">Account</a>
+		<a class = "pages-a" href = "index.html">Home</a>
+		<a  class = "pages-a" href = "info.html">Learn More About Sleep</a>
+		<a  class = "pages-a" href = "music.html">Sleep Music</a>
+		<a  class = "pages-a" href = "record.html">Record Sleep</a>
+		<a  class = "pages-a" id = "acc">Account</a>
 		<div id = "container">
 			<h1>Sleep</h1>
-			<button onclick = "displayStuff('info');">Introduction</button>
+			<button class = "info-button" onclick = "displayStuff('info');">Introduction</button>
 			<div id = "info">
-				<h2>
+				<h2 class = "info-h2">
 					Sleep is an important part of your daily routine. People spend about one-third of their time doing it. Quality sleep is as essential to survival as food and water. Without sleep you can not form or maintain the pathways in your brain that let you learn and create new memories, and it is harder to concentrate and respond quickly.
 				</h2>
 				<br />
 				<img class = "info" src = "images/intro.jpg"/>
 				<br />
-				<h2>
+				<h2 class = "info-h2">
 					Sleep is important to a number of brain functions, including how nerve cells (neurons) communicate with each other. In fact, your brain and body stay remarkably active while you sleep. Recent findings suggest that sleep plays a housekeeping role that removes toxins in your brain that build up while you are awake. 
 					<br />
-					<h4>Source: Brain Basics: Understanding Sleep. National Institute of Neurological Disorders and Stroke, Jun. 2019, https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep. Accessed April 2018.</h4>
+					<h4 class = "info-h4">Source: Brain Basics: Understanding Sleep. National Institute of Neurological Disorders and Stroke, Jun. 2019, https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep. Accessed April 2018.</h4>
 				</h2>
 			</div>
-			<button onclick = "displayStuff('time');">How Much Sleep Do You Need?</button>
+			<button class = "info-button" onclick = "displayStuff('time');">How Much Sleep Do You Need?</button>
 			<div id = "time">
-				<h2>
+				<h2 class = "info-h2">
 					Your need for sleep and your sleep patterns change as you age, but this varies significantly across individuals of the same age.  There is no magic "number of sleep hours" that works for everybody of the same age. Babies initially sleep as much as 16 to 18 hours per day, which may boost growth and development (especially of the brain). School-age children and teens on average need about 9.5 hours of sleep per night. Most adults need 7-9 hours of sleep a night, but after age 60, nighttime sleep tends to be shorter, lighter, and interrupted by multiple awakenings. Elderly people are also more likely to take medications that interfere with sleep. 
 				</h2>
 				<br />
 				<img class = "info" src = "images/time.jpg"/>
 				<br />
-				<h2>
+				<h2 class = "info-h2">
 					In general, people are getting less sleep than they need due to longer work hours and the availability of round-the-clock entertainment and other activities. 
 					<br />
 					<br />
 					Many people feel they can "catch up" on missed sleep during the weekend but, depending on how sleep-deprived they are, sleeping longer on the weekends may not be adequate.
 					<br />
-					<h4>Source: Brain Basics: Understanding Sleep. National Institute of Neurological Disorders and Stroke, Jun. 2019, https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep. Accessed April 2018.</h4>
+					<h4 class = "info-h4">Source: Brain Basics: Understanding Sleep. National Institute of Neurological Disorders and Stroke, Jun. 2019, https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep. Accessed April 2018.</h4>
 				</h2>
 			</div>
-			<button onclick = "displayStuff('dream');">Dreaming</button>
+			<button class = "info-button" onclick = "displayStuff('dream');">Dreaming</button>
 			<div id = "dream">
-				<h2>
+				<h2 class = "info-h2">
 					Everyone dreams. You spend about 2 hours each night dreaming but may not remember most of your dreams. Its exact purpose is not known, but dreaming may help you process your emotions. Events from the day often invade your thoughts during sleep, and people suffering from stress or anxiety are more likely to have frightening dreams. Dreams can be experienced in all stages of sleep but usually are most vivid in REM sleep. Some people dream in color, while others only recall dreams in black and white.
 				</h2>
 				<img class = "info" src = "images/dream.jpg"/>
-				<h4>Source: Brain Basics: Understanding Sleep. National Institute of Neurological Disorders and Stroke, Jun. 2019, https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep. Accessed April 2018.</h4>
+				<h4 class = "info-h4">Source: Brain Basics: Understanding Sleep. National Institute of Neurological Disorders and Stroke, Jun. 2019, https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep. Accessed April 2018.</h4>
 			</div>
-			<button onclick = "displayStuff('deprive');">Sleep Deprivation</button>
+			<button class = "info-button" onclick = "displayStuff('deprive');">Sleep Deprivation</button>
 			<div id = "deprive">
-				<h2>
+				<h2 class = "info-h2">
 					Sleep deprivation is the condition of not having enough sleep; it can be either chronic or acute. A chronic sleep-restricted state can cause fatigue, daytime sleepiness, clumsiness and weight loss or weight gain. It adversely affects the brain and cognitive function.
-					<h4>Source: The Impact  of Sleep Deprivation. Gingras Sleep Medicine. https://www.gingrassleepmedicine.com/2017/02/20/impact-sleep-deprivation. Accessed April 2018.</h4>
+					<h4 class = "info-h4">Source: The Impact  of Sleep Deprivation. Gingras Sleep Medicine. https://www.gingrassleepmedicine.com/2017/02/20/impact-sleep-deprivation. Accessed April 2018.</h4>
 				</h2>
 				<br />
 				<img class = "info" src = "images/sleepDeprived.jpg"/>
 				<br />
-				<h2>
+				<h2 class = "info-h2">
 					Microsleeps occur when a person has a significant sleep deprivation. Microsleeps usually last for a few seconds and happen most frequently when a person is trying to stay awake when they are feeling sleepy. The person usually falls into microsleep while doing a monotonous task like driving, reading a book, or staring at a computer. Microsleeps are similar to blackouts and a person experiencing them is not consciously aware that they are occurring.
-					<h4>Source: Sleep Deprivation. Wikipedia. https://en.wikipedia.org/wiki/Sleep_deprivation#targetText=Microsleeps%20occur%20when%20a%20person,when%20they%20are%20feeling%20sleepy. Acessed April 2018.</h4>
+					<h4 class = "info-h4">Source: Sleep Deprivation. Wikipedia. https://en.wikipedia.org/wiki/Sleep_deprivation#targetText=Microsleeps%20occur%20when%20a%20person,when%20they%20are%20feeling%20sleepy. Acessed April 2018.</h4>
 				</h2>
 			</div>
 		</div>

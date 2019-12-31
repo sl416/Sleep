@@ -3,8 +3,7 @@
 <html>
 	<head>
 		<title>Sleep</title>
-		<link rel = "stylesheet" href = "pages.css"/>
-		<link rel = "stylesheet" href = "account.css"/>
+		<link rel = "stylesheet" href = "style.css"/>
 		<style></style>
 		<script>
 			function initialize()
@@ -56,25 +55,25 @@
 	</head>
 	<body onload = "initialize();">
 		<img class = "bgnd" src = "images/bgnd2.jpg"/>
-		<a href = "index.html">Home</a>
-		<a href = "info.html">Learn More About Sleep</a>
-		<a href = "music.html">Sleep Music</a>
-		<a href = "record.html">Record Sleep</a>
-		<a href = "account.html">Account</a>
+		<a class = "pages-a" href = "index.html">Home</a>
+		<a class = "pages-a" href = "info.html">Learn More About Sleep</a>
+		<a class = "pages-a" href = "music.html">Sleep Music</a>
+		<a class = "pages-a" href = "record.html">Record Sleep</a>
+		<a class = "pages-a" href = "account.html">Account</a>
 		<br />
 		<br />
-		<div id = "divy"></div>
+		<div id = "divy" class = "acc-div"></div>
 		<br />
-		<img id = "icon" src = ""/>
+		<img id = "icon" class = "acc-icon" src = ""/>
 		<br />
 		<h2>Change Profile Picture</h2>
 		<br />
-		<img src = "images/default.png" onclick = "changePic('images/default.png');"/>
-		<img src = "images/bear.png" onclick = "changePic('images/bear.png');"/>
-		<img src = "images/flower.png" onclick = "changePic('images/flower.png');"/>
-		<img src = "images/flower2.png" onclick = "changePic('images/flower2.png');"/>
-		<img src = "images/butterfly.png" onclick = "changePic('images/butterfly.png');"/>
-		<img src = "images/star.png" onclick = "changePic('images/star.png');"/>
+		<img class = "acc-img" src = "images/default.png" onclick = "changePic('images/default.png');"/>
+		<img class = "acc-img" src = "images/bear.png" onclick = "changePic('images/bear.png');"/>
+		<img class = "acc-img" src = "images/flower.png" onclick = "changePic('images/flower.png');"/>
+		<img class = "acc-img" src = "images/flower2.png" onclick = "changePic('images/flower2.png');"/>
+		<img class = "acc-img" src = "images/butterfly.png" onclick = "changePic('images/butterfly.png');"/>
+		<img class = "acc-img" src = "images/star.png" onclick = "changePic('images/star.png');"/>
 		<br />
 		<br />
 		<form method = "post" action = "index.html">

@@ -3,8 +3,7 @@
 <html>
 	<head>
 		<title>Sleep</title>
-		<link rel = "stylesheet" href = "pages.css"></style>
-		<link rel = "stylesheet" href = "record.css"></style>
+		<link rel = "stylesheet" href = "style.css"></style>
 		<style></style>
 		<script>
 			function initialize()
@@ -184,27 +183,27 @@
 	</head>
 	<body onload = "initialize();">
 		<img class = "bgnd" src = "images/bgnd.jpg"/>
-		<a href = "index.html">Home</a>
-		<a href = "info.html">Learn More About Sleep</a>
-		<a href = "music.html">Sleep Music</a>
-		<a href = "record.html">Record Sleep</a>
-		<a id = "acc">Account</a>
+		<a class = "pages-a" href = "index.html">Home</a>
+		<a class = "pages-a" href = "info.html">Learn More About Sleep</a>
+		<a class = "pages-a" href = "music.html">Sleep Music</a>
+		<a class = "pages-a" href = "record.html">Record Sleep</a>
+		<a class = "pages-a" id = "acc">Account</a>
 		<br />
 		<h1>How Long Did You Sleep Last Night?</h1>
-		<h2>What Time Did You Sleep At?</h2>
+		<h2 class = "record-h2">What Time Did You Sleep At?</h2>
 		<br />
 		<select id = "sleepHrsOut" class = "hrsOut"></select>
-		<h2>:</h2>
+		<h2 class = "record-h2">:</h2>
 		<select id = "sleepMinsOut" class = "minsOut"></select>
 		<select id = "sleepTimeOut">
 			<option value = "a.m.">a.m.</option>
 			<option value = "p.m.">p.m.</option>
 		</select>
 		<br />
-		<h2>What Time Did You Wake Up At?</h2>
+		<h2 class = "record-h2">What Time Did You Wake Up At?</h2>
 		<br />
 		<select id = "wakeHrsOut" class = "hrsOut"></select>
-		<h2>:</h2>
+		<h2 class = "record-h2">:</h2>
 		<select id = "wakeMinsOut" class = "minsOut"></select>
 		<select id = "wakeTimeOut">
 			<option value = "a.m.">a.m.</option>
@@ -214,17 +213,17 @@
 		<button onclick = "calc();">Calculate</button>
 		<br />
 		<br />
-		<span id = "calcTextOut"></span>
+		<span id = "calcTextOut" class = "record-span"></span>
 		<br />
 		<br />
 		<div id = "emotions">
-			<h2>How Did You Feel When You Woke Up?</h2>
+			<h2 class = "record-h2">How Did You Feel When You Woke Up?</h2>
 			<br />
 			<img class = "feelings" onclick = "emotions('upset')" src = "images/upset.png"/>
 			<img class = "feelings" onclick = "emotions('neutral')" src = "images/neutral.png"/>
 			<img class = "feelings" onclick = "emotions('happy')" src = "images/happy.png"/>
 			<br />
-			<span id = "emotionsText"></span>
+			<span id = "emotionsText" class = "record-span"></span>
 		</div>
 	</body>
 </html>

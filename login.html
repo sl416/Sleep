@@ -2,14 +2,9 @@
 	<head>
 		<title>Sleep</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-		<link rel = "stylesheet" href = "pages.css"/>		
+		<link rel = "stylesheet" href = "style.css"/>		
 	</head>
-	<style>
-		div
-		{
-			font-size:40px;
-		}
-	</style>
+	<style></style>
 	<script>
 		function initialize()
 		{
@@ -44,15 +39,15 @@
 	</script>
 	<body onload = "initialize();">
 		<img class = "bgnd" src = "images/bgnd2.jpg"/>
-		<a href = "index.html">Home</a>
-		<a href = "info.html">Learn More About Sleep</a>
-		<a href = "music.html">Sleep Music</a>
-		<a href = "record.html">Record Sleep</a>
-		<a href = "login.html">Account</a>
+		<a class = "pages-a" href = "index.html">Home</a>
+		<a class = "pages-a" href = "info.html">Learn More About Sleep</a>
+		<a class = "pages-a" href = "music.html">Sleep Music</a>
+		<a class = "pages-a" href = "record.html">Record Sleep</a>
+		<a class = "pages-a" href = "login.html">Account</a>
 		<br />
 		<br />
-		<div id = "divy">Sign In</div>
-		<div id = "divy2"></div>
+		<div id = "divy" class = "login-div">Sign In</div>
+		<div id = "divy2" class = "login-div"></div>
 		<br />
 		<form method = "post">
 			Username: <input type = "text" name = "uname" />
@@ -61,6 +56,6 @@
 			<input type = "submit" />
 		</form>
 		<br />
-		<a href = "registration.html">Register</a>
+		<a class = "pages-a" href = "registration.html">Register</a>
 	</body>
 </html>

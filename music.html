@@ -3,8 +3,7 @@
 <html>
 	<head>
 		<title>Sleep</title>
-		<link rel = "stylesheet" href = "pages.css"></style>
-		<link rel = "stylesheet" href = "music.css"></style>
+		<link rel = "stylesheet" href = "style.css"></style>
 		<style></style>
 		<script>
 			function initialize()
@@ -67,6 +66,7 @@
 						{
 							var divThing = document.createElement("div");
 							var title = document.createElement("span");
+							title.className = "music-span";
 							title.innerHTML = theFavs[i][0];
 							var imgSrc = document.createElement("img");
 							imgSrc.src = theFavs[i][1];
@@ -118,6 +118,7 @@
 								var obj = JSON.parse(response[i]);
 								var divThing = document.createElement("div");
 								var title = document.createElement("span");
+								title.className = "music-span";
 								title.innerHTML = obj.name;
 								title.className = "title";
 								var imgSrc = document.createElement("img");
@@ -179,18 +180,18 @@
 	</head>
 	<body onload = "initialize();">
 		<img class = "bgnd" src = "images/bgnd.jpg"/>
-		<a href = "index.html">Home</a>
-		<a href = "info.html">Learn More About Sleep</a>
-		<a href = "music.html">Sleep Music</a>
-		<a href = "record.html">Record Sleep</a>
-		<a id = "acc">Account</a>
+		<a  class = "pages-a" href = "index.html">Home</a>
+		<a  class = "pages-a" href = "info.html">Learn More About Sleep</a>
+		<a  class = "pages-a" href = "music.html">Sleep Music</a>
+		<a  class = "pages-a" href = "record.html">Record Sleep</a>
+		<a  class = "pages-a" id = "acc">Account</a>
 		<br />
 		<br />
 		<br />
-		<button onclick = "select('music');">Music</button>
-		<button onclick = "select('sounds');">Sounds</button>
-		<button onclick = "select('fav');">Favorites</button>
+		<button class = "music-button" onclick = "select('music');">Music</button>
+		<button class = "music-button" onclick = "select('sounds');">Sounds</button>
+		<button class = "music-button" onclick = "select('fav');">Favorites</button>
 		<br />
-		<div id = "divy">
+		<div id = "divy" class = "music-div">
 	</body>
 </html>

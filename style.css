@@ -1,0 +1,272 @@
+/* All Pages */
+.bgnd
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:-1;
+	min-height:100%;
+	filter:brightness(75%) blur(5px);
+}
+
+body
+{
+	font:bold 20px arial;
+	color:white;
+	text-align:center;
+	text-shadow:2px 2px black;
+}
+
+.pages-a
+{
+	color: white;
+    padding:10px 50px;
+	background-color:#5353c6;
+	margin:10px;
+}
+
+button
+{
+	display:inline-block;
+	color:white;
+	background-color:#0099ff;
+	font-size:40px;
+	width:200px;
+	height:70px;
+	border:none;
+}
+
+button:hover, button:active
+{
+	background-color:#008ae6
+}
+
+button:active
+{
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+.pages-a, button
+{
+	text-align:center;
+    text-decoration:none;
+    display:inline-block;
+}
+
+/* Index */
+.container
+{
+	position:relative;
+	text-align:center
+}
+
+.index-img
+{
+	width:60%;
+}
+
+.index-a
+{
+	color:black;
+	font:bold 50px arial;
+	padding:10px 50px;
+	text-decoration:none;
+	text-shadow:none;
+}
+
+.text
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+#acc
+{
+	color:white;
+}
+
+.acc
+{
+	width:98vw;
+	height:75px;
+	text-align:center;
+	margin-top:30px;
+}
+
+.index-icon
+{
+	width:65px;
+}
+
+.bgnd
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:-1;
+	min-height:100%;
+	filter:brightness(80%) blur(5px);
+}
+
+/* Info */
+.info-button
+{
+	width:80vw;
+	height:50px;
+	margin:5px;
+}
+
+#container
+{
+	margin: 0 auto;
+	width:80vw;
+}
+
+.info-h2, .info-h4
+{
+	text-align:left;
+}
+
+.info
+{
+	width:500px;
+	text-align:center;
+}
+
+.info-h4 
+{
+	font-size:9px;
+}
+
+/* Music */
+.music-div
+{
+	margin:0 auto;
+	width:55vw;
+	border: 5px solid white;
+	text-align:center;
+}
+
+.music-button, .music-div img, .music-span, audio
+{
+	margin:10px;
+}
+
+audio
+{
+	display:inline-block;
+}
+
+.music-span
+{
+	font-size:40px;
+}
+
+.play
+{
+	width:200px;
+	height:50px;
+	background-color:red;
+	color:white;
+	font-size:25px;
+}
+
+.play:hover
+{
+	background-color:#ffb3da;
+}
+
+.title {
+	line-height: 50px;
+}
+
+.music-div img {
+	width:300px;
+}
+
+/* Record */
+.record-h2, select
+{
+	margin-left:30px;
+	margin-right:30px;
+	display:inline-block;
+}
+
+select
+{
+	font-size:30px;
+	border:none;
+	background-color:transparent;
+	color:white;
+}
+
+select option
+{
+	color:black;
+}
+
+.record-span
+{
+	font-size:30px;
+}
+
+.feelings
+{
+	width:150px;
+}
+
+/* Account */
+.acc-div
+{
+	font-size:40px;
+}
+
+.acc-img
+{
+	width:150px;
+}
+
+.acc-icon
+{
+	width:300px;
+}
+
+#logOut
+{
+	background-color:red;
+}
+
+#submit
+{
+	display:inline-block;
+	color:white;
+	background-color:#0099ff;
+	font-size:40px;
+	width:200px;
+	height:70px;
+	border:none;
+	text-align:center;
+    text-decoration:none;
+}
+
+#submit:hover, #submit:active
+{
+	background-color:#008ae6
+}
+
+#submit:active
+{
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+/* Login */
+.login-div
+{
+	font-size:40px;
+}
